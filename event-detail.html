@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover event details, explore the lineup, and choose your tickets with Open Tickets.">
+  <title>The Midnight Echoes | Open Tickets</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/event-detail.css">
+
+  <script src="javascript/event-detail.js" defer></script>
+</head>
+
+<body id="top">
+  <!-- === Header === -->
+  <header class="event-header">
+    <nav class="navbar navbar-expand-lg event-navbar" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand event-brand" href="index.html" aria-label="Open Tickets home">
+          <span class="brand-ticket">
+            <span>OPEN</span>
+            <span>TICKETS</span>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler event-nav-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#eventNavigation"
+          aria-controls="eventNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="eventNavigation">
+          <ul class="navbar-nav mx-lg-5 me-auto mb-3 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event-detail.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Support.html">Support</a>
+            </li>
+          </ul>
+
+          <form class="event-header-search" id="headerSearchForm" role="search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="headerSearch"
+              name="search"
+              placeholder="Search events..."
+              aria-label="Search events"
+            >
+          </form>
+
+          <a class="event-account-link" href="account.html" aria-label="My account">
+            <i class="bi bi-person" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- === Event Hero === -->
+    <section class="event-hero" aria-labelledby="eventTitle">
+      <div class="event-hero-image" aria-hidden="true"></div>
+      <div class="event-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container event-hero-inner">
+        <div class="event-hero-copy">
+          <span class="event-category-badge" id="eventCategory">Music</span>
+
+          <h1 id="eventTitle">The Midnight Echoes</h1>
+
+          <div class="event-hero-meta">
+            <span>
+              <i class="bi bi-calendar-event" aria-hidden="true"></i>
+              <time id="eventDate" datetime="2025-05-24">Sat, 24 May 2025</time>
+            </span>
+
+            <span>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <span id="eventVenueShort">Cape Town Stadium, Cape Town</span>
+            </span>
+          </div>
+
+          <p class="event-hero-description" id="eventShortDescription">
+            Experience an unforgettable night with The Midnight Echoes,
+            featuring their latest album and a special guest performance.
+          </p>
+
+          <div class="event-tags">
+            <span><i class="bi bi-music-note-beamed"></i> Live Music</span>
+            <span><i class="bi bi-star"></i> Special Guests</span>
+            <span><i class="bi bi-shield-check"></i> Event Information</span>
+          </div>
+        </div>
+
+        <aside class="ticket-summary" aria-label="Ticket summary">
+          <div class="ticket-summary-price">
+            <span>From</span>
+            <p><span id="startingPrice">R 499</span> <small>/ ticket</small></p>
+          </div>
+
+          <a class="primary-button ticket-summary-button" href="#ticketSelection">
+            Get Tickets <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <div class="ticket-summary-details">
+            <div>
+              <i class="bi bi-calendar2-check" aria-hidden="true"></i>
+              <p>
+                <strong id="summaryDate">Sat, 24 May 2025</strong>
+                <span id="eventTime">06:00 PM – 11:00 PM</span>
+              </p>
+            </div>
+
+            <div>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              <p>
+                <strong id="summaryVenue">Cape Town Stadium</strong>
+                <span id="summaryAddress">Cape Town, South Africa</span>
+              </p>
+            </div>
+
+            <div>
+              <i class="bi bi-person-check" aria-hidden="true"></i>
+              <p>
+                <strong id="eventAge">All Ages</strong>
+                <span>Check event entry requirements</span>
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- === Event Overview === -->
+    <section class="event-main-section">
+      <div class="container">
+        <div class="event-overview-grid">
+          <div class="event-gallery-preview">
+            <button
+              class="gallery-main-image"
+              type="button"
+              data-gallery-index="0"
+              aria-label="View main event photo"
+            >
+              <span class="gallery-play-button" aria-hidden="true">
+                <i class="bi bi-play-fill"></i>
+              </span>
+            </button>
+
+            <div class="gallery-thumbnails">
+              <button
+                class="gallery-thumbnail is-selected"
+                type="button"
+                data-gallery-index="1"
+                aria-label="View event photo 2"
+              ></button>
+              <button
+                class="gallery-thumbnail"
+                type="button"
+                data-gallery-index="2"
+                aria-label="View event photo 3"
+              ></button>
+              <button
+                class="gallery-thumbnail"
+                type="button"
+                data-gallery-index="3"
+                aria-label="View event photo 4"
+              ></button>
+            </div>
+          </div>
+
+          <article class="event-about">
+            <span class="section-eyebrow">ABOUT EVENT</span>
+            <h2 id="aboutEventTitle">The Midnight Echoes</h2>
+
+            <p id="eventDescription">
+              Get ready for an epic night of music, energy, and unforgettable
+              moments. The Midnight Echoes bring their signature sound to
+              Cape Town for a one-night-only performance. Expect a mix of
+              new hits and fan favorites, with stunning visuals and special
+              guest appearances.
+            </p>
+
+            <div class="event-topic-tags">
+              <span>Music</span>
+              <span>Concert</span>
+              <span>Live Performance</span>
+            </div>
+          </article>
+
+          <div class="event-note" aria-hidden="true">
+            <span>Good</span>
+            <span>Music</span>
+            <span>Better</span>
+            <span>Moments</span>
+            <i class="bi bi-arrow-down-left"></i>
+          </div>
+        </div>
+
+        <!-- === Highlights, Lineup, Tickets === -->
+        <div class="event-details-grid">
+          <section class="event-highlights" aria-labelledby="highlightsTitle">
+            <span class="section-line"></span>
+            <h2 class="section-title" id="highlightsTitle">Event Highlights</h2>
+
+            <div class="highlight-list">
+              <article class="highlight-item">
+                <span class="highlight-icon">
+                  <i class="bi bi-award" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h3>World-Class Performers</h3>
+                  <p>Top artists and special guests.</p>
+                </div>
+              </article>
+
+              <article class="highlight-item">
+                <span class="highlight-icon">
+                  <i class="bi bi-stars" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h3>Stunning Visuals</h3>
+                  <p>Immersive light and stage design.</p>
+                </div>
+              </article>
+
+              <article class="highlight-item">
+                <span class="highlight-icon">
+                  <i class="bi bi-cup-straw" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h3>Food &amp; Beverage</h3>
+                  <p>Check the venue's available options.</p>
+                </div>
+              </article>
+
+              <article class="highlight-item">
+                <span class="highlight-icon">
+                  <i class="bi bi-universal-access" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h3>Accessibility</h3>
+                  <p>Contact the venue about access arrangements.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="event-lineup" aria-labelledby="lineupTitle">
+            <span class="section-line"></span>
+            <h2 class="section-title" id="lineupTitle">Line Up</h2>
+
+            <div class="lineup-list" id="lineupList">
+              <article class="lineup-item">
+                <div class="lineup-avatar lineup-avatar-one" aria-hidden="true"></div>
+                <div class="lineup-info">
+                  <h3>The Midnight Echoes</h3>
+                  <p>08:30 PM – 10:30 PM</p>
+                </div>
+                <span class="lineup-role">Main Act</span>
+              </article>
+
+              <article class="lineup-item">
+                <div class="lineup-avatar lineup-avatar-two" aria-hidden="true"></div>
+                <div class="lineup-info">
+                  <h3>The Lunar Tides</h3>
+                  <p>07:00 PM – 08:00 PM</p>
+                </div>
+                <span class="lineup-role">Guest</span>
+              </article>
+
+              <article class="lineup-item">
+                <div class="lineup-avatar lineup-avatar-three" aria-hidden="true"></div>
+                <div class="lineup-info">
+                  <h3>Nova Lights</h3>
+                  <p>05:30 PM – 06:30 PM</p>
+                </div>
+                <span class="lineup-role">Opening Act</span>
+              </article>
+            </div>
+
+            <button class="outline-button" id="viewFullLineup" type="button">
+              View Full Line Up <i class="bi bi-arrow-right"></i>
+            </button>
+          </section>
+
+          <!-- === Ticket Selection === -->
+          <section class="ticket-selection" id="ticketSelection" aria-labelledby="ticketSelectionTitle">
+            <span class="section-line"></span>
+            <h2 class="section-title" id="ticketSelectionTitle">Select Tickets</h2>
+
+            <form id="ticketForm">
+              <div class="ticket-type" data-ticket-type data-ticket-id="general">
+                <div class="ticket-type-info">
+                  <h3>General Admission</h3>
+                  <p>R <span data-ticket-price>499</span></p>
+                </div>
+
+                <div class="quantity-control">
+                  <button
+                    type="button"
+                    data-quantity-change="-1"
+                    aria-label="Remove one General Admission ticket"
+                    disabled
+                  >−</button>
+                  <output data-quantity aria-live="polite">0</output>
+                  <button
+                    type="button"
+                    data-quantity-change="1"
+                    aria-label="Add one General Admission ticket"
+                  >+</button>
+                </div>
+              </div>
+
+              <div class="ticket-type" data-ticket-type data-ticket-id="vip">
+                <div class="ticket-type-info">
+                  <h3>VIP</h3>
+                  <p>R <span data-ticket-price>999</span></p>
+                </div>
+
+                <div class="quantity-control">
+                  <button
+                    type="button"
+                    data-quantity-change="-1"
+                    aria-label="Remove one VIP ticket"
+                    disabled
+                  >−</button>
+                  <output data-quantity aria-live="polite">0</output>
+                  <button
+                    type="button"
+                    data-quantity-change="1"
+                    aria-label="Add one VIP ticket"
+                  >+</button>
+                </div>
+              </div>
+
+              <div class="ticket-type" data-ticket-type data-ticket-id="vvip">
+                <div class="ticket-type-info">
+                  <h3>VVIP</h3>
+                  <p>R <span data-ticket-price>1499</span></p>
+                </div>
+
+                <div class="quantity-control">
+                  <button
+                    type="button"
+                    data-quantity-change="-1"
+                    aria-label="Remove one VVIP ticket"
+                    disabled
+                  >−</button>
+                  <output data-quantity aria-live="polite">0</output>
+                  <button
+                    type="button"
+                    data-quantity-change="1"
+                    aria-label="Add one VVIP ticket"
+                  >+</button>
+                </div>
+              </div>
+
+              <div class="ticket-total">
+                <span>Total</span>
+                <output id="ticketTotal" aria-live="polite">R 0</output>
+              </div>
+
+              <p class="ticket-selection-message" id="ticketMessage" aria-live="polite"></p>
+
+              <button class="primary-button ticket-checkout-button" type="submit">
+                Get Tickets <i class="bi bi-arrow-right"></i>
+              </button>
+
+              <p class="ticket-disclaimer">
+                Ticket availability and final prices must be confirmed at checkout.
+              </p>
+            </form>
+          </section>
+        </div>
+
+        <!-- === Gallery and Location === -->
+        <div class="event-extra-grid">
+          <section class="event-gallery-section" aria-labelledby="galleryTitle">
+            <div class="section-heading-row">
+              <div>
+                <span class="section-line"></span>
+                <h2 class="section-title" id="galleryTitle">Gallery</h2>
+              </div>
+              <button class="text-button" id="viewAllGallery" type="button">
+                View All
+              </button>
+            </div>
+
+            <div class="event-gallery-grid">
+              <button
+                class="event-gallery-photo gallery-photo-main"
+                type="button"
+                data-gallery-index="0"
+                aria-label="Open event gallery photo 1"
+              ></button>
+
+              <button
+                class="event-gallery-photo gallery-photo-two"
+                type="button"
+                data-gallery-index="1"
+                aria-label="Open event gallery photo 2"
+              ></button>
+
+              <button
+                class="event-gallery-photo gallery-photo-three"
+                type="button"
+                data-gallery-index="2"
+                aria-label="Open event gallery photo 3"
+              ></button>
+
+              <button
+                class="event-gallery-photo gallery-photo-four"
+                type="button"
+                data-gallery-index="3"
+                aria-label="Open event gallery photo 4"
+              ></button>
+            </div>
+          </section>
+
+          <section class="event-location" aria-labelledby="locationTitle">
+            <span class="section-line"></span>
+            <h2 class="section-title" id="locationTitle">Location</h2>
+
+            <div class="location-map">
+              <div class="map-pin" aria-hidden="true">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+
+              <div class="map-label">
+                <strong id="mapVenue">Cape Town</strong>
+                <span id="mapVenueSubtitle">Cape Town Stadium</span>
+              </div>
+
+              <div class="location-card">
+                <div>
+                  <strong id="locationCardVenue">Cape Town Stadium</strong>
+                  <span id="locationCardAddress">Cape Town, South Africa</span>
+                </div>
+                <a
+                  class="outline-button location-directions"
+                  id="directionsLink"
+                  href="https://www.google.com/maps/search/?api=1&query=Cape+Town+Stadium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Directions <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- === Similar Events === -->
+        <section class="similar-events-section" aria-labelledby="similarEventsTitle">
+          <div class="section-heading-row">
+            <div>
+              <span class="section-line"></span>
+              <h2 class="section-title" id="similarEventsTitle">Similar Events</h2>
+            </div>
+            <a class="text-button" href="index.html#featured">View All</a>
+          </div>
+
+          <div class="row g-3 similar-events-grid" id="similarEventsGrid">
+            <div class="col-6 col-lg-3">
+              <article class="similar-event-card">
+                <a class="similar-event-image similar-image-one" href="event-detail.html" aria-label="View Summer Vibes Festival"></a>
+                <div class="similar-event-info">
+                  <h3><a href="event-detail.html">Summer Vibes Festival</a></h3>
+                  <p><i class="bi bi-calendar3"></i> 12 Jul 2026 <span>Johannesburg</span></p>
+                  <a class="similar-event-price" href="event-detail.html">
+                    From R 399 <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <article class="similar-event-card">
+                <a class="similar-event-image similar-image-two" href="event-detail.html" aria-label="View Ocean Sounds"></a>
+                <div class="similar-event-info">
+                  <h3><a href="event-detail.html">Ocean Sounds</a></h3>
+                  <p><i class="bi bi-calendar3"></i> 02 Aug 2026 <span>Durban</span></p>
+                  <a class="similar-event-price" href="event-detail.html">
+                    From R 449 <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <article class="similar-event-card">
+                <a class="similar-event-image similar-image-three" href="event-detail.html" aria-label="View The Horizon Tour"></a>
+                <div class="similar-event-info">
+                  <h3><a href="event-detail.html">The Horizon Tour</a></h3>
+                  <p><i class="bi bi-calendar3"></i> 06 Aug 2026 <span>Pretoria</span></p>
+                  <a class="similar-event-price" href="event-detail.html">
+                    From R 499 <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <article class="similar-event-card">
+                <a class="similar-event-image similar-image-four" href="event-detail.html" aria-label="View Neon Nights"></a>
+                <div class="similar-event-info">
+                  <h3><a href="event-detail.html">Neon Nights</a></h3>
+                  <p><i class="bi bi-calendar3"></i> 30 Aug 2026 <span>Cape Town</span></p>
+                  <a class="similar-event-price" href="event-detail.html">
+                    From R 429 <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- === Gallery Dialog === -->
+    <dialog class="gallery-dialog" id="galleryDialog" aria-label="Event photo viewer">
+      <div class="gallery-dialog-content">
+        <button
+          class="gallery-dialog-close"
+          id="closeGallery"
+          type="button"
+          aria-label="Close gallery"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <button
+          class="gallery-dialog-nav gallery-dialog-prev"
+          id="galleryPrev"
+          type="button"
+          aria-label="Previous photo"
+        >
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <img id="galleryDialogImage" src="" alt="Event gallery photo">
+
+        <button
+          class="gallery-dialog-nav gallery-dialog-next"
+          id="galleryNext"
+          type="button"
+          aria-label="Next photo"
+        >
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <p id="galleryCounter">1 / 4</p>
+      </div>
+    </dialog>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="event-footer">
+    <div class="container">
+      <div class="row gy-4 event-footer-main">
+        <div class="col-6 col-lg-3">
+          <a class="event-brand footer-brand" href="index.html" aria-label="Open Tickets home">
+            <span class="brand-ticket">
+              <span>OPEN</span>
+              <span>TICKETS</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#featured">Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="account.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Support</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Stay Connected</h2>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Open Tickets. All rights reserved.</p>
+
+        <label class="event-language-select">
+          <i class="bi bi-globe2" aria-hidden="true"></i>
+          <select id="languageSelect" aria-label="Select language">
+            <option value="en" selected>English</option>
+            <option value="id">Bahasa Indonesia</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

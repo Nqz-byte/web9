@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get help with Open Tickets orders, events, accounts, payments, and ticket support.">
+  <title>Support Center | Open Tickets</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/support.css">
+  <script src="javascript/support.js" defer></script>
+</head>
+
+<body>
+  <!-- === Header === -->
+  <header class="support-header">
+    <nav class="navbar navbar-expand-lg support-navbar" aria-label="Main navigation">
+      <div class="container">
+
+        <a class="navbar-brand support-brand" href="index.html" aria-label="Open Tickets home">
+          <span class="brand-ticket">
+            <span>OPEN</span>
+            <span>TICKETS</span>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler support-nav-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#supportNavigation"
+          aria-controls="supportNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="supportNavigation">
+          <ul class="navbar-nav mx-lg-5 me-auto mb-3 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event-detail.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="support.html">Support</a>
+            </li>
+          </ul>
+
+          <form class="header-search" id="headerSearchForm" role="search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="headerSearch"
+              name="search"
+              placeholder="Search events..."
+              aria-label="Search events">
+          </form>
+
+          <a class="account-link" href="account.html" aria-label="My account">
+            <i class="bi bi-person" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- === Hero === -->
+    <section class="support-hero" aria-labelledby="supportHeroTitle">
+      <div class="support-hero-image" aria-hidden="true"></div>
+      <div class="support-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container support-hero-content">
+        <div class="support-hero-copy">
+          <span class="eyebrow">SUPPORT</span>
+
+          <h1 id="supportHeroTitle">
+            We’re Here<br>
+            To <span>Help You</span>
+          </h1>
+
+          <p>
+            Got questions, need assistance, or facing an issue?
+            Our support team is ready to help you with anything
+            related to your event experience.
+          </p>
+
+          <div class="support-benefits">
+            <div class="support-benefit">
+              <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+              <span>Fast Response</span>
+            </div>
+
+            <div class="support-benefit">
+              <i class="bi bi-shield-check" aria-hidden="true"></i>
+              <span>Trusted Support</span>
+            </div>
+
+            <div class="support-benefit">
+              <i class="bi bi-heart" aria-hidden="true"></i>
+              <span>Your Experience<br>Matters</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="live-chat-card">
+          <h2>Need immediate help?</h2>
+          <p>Chat with our support team now.</p>
+
+          <a class="primary-button" href="contact.html">
+            <i class="bi bi-chat-square-dots" aria-hidden="true"></i>
+            Live Chat
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Help Categories === -->
+    <section
+      class="help-categories section-shell"
+      aria-labelledby="helpCategoriesTitle">
+
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">HELP CATEGORIES</span>
+            <h2 id="helpCategoriesTitle">How Can We Help?</h2>
+          </div>
+
+          <p>
+            Find answers quickly or reach out to us
+            <br class="d-none d-md-block">
+            if you need more help.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <a
+            class="category-card"
+            href="faq.html#tickets"
+            data-help-category="tickets">
+
+            <span class="category-icon">
+              <i class="bi bi-ticket-perforated" aria-hidden="true"></i>
+            </span>
+
+            <h3>Ticket &amp; Orders</h3>
+            <p>Get help with your tickets, order status, and refunds.</p>
+
+            <span class="category-arrow" aria-hidden="true">
+              <i class="bi bi-arrow-right"></i>
+            </span>
+          </a>
+
+          <a
+            class="category-card"
+            href="event-detail.html"
+            data-help-category="events">
+
+            <span class="category-icon">
+              <i class="bi bi-calendar4-event" aria-hidden="true"></i>
+            </span>
+
+            <h3>Event Information</h3>
+            <p>Find details about our events, venues, and schedules.</p>
+
+            <span class="category-arrow" aria-hidden="true">
+              <i class="bi bi-arrow-right"></i>
+            </span>
+          </a>
+
+          <a
+            class="category-card"
+            href="account.html"
+            data-help-category="account">
+
+            <span class="category-icon">
+              <i class="bi bi-person" aria-hidden="true"></i>
+            </span>
+
+            <h3>Account &amp; Security</h3>
+            <p>Manage your account, privacy, and security settings.</p>
+
+            <span class="category-arrow" aria-hidden="true">
+              <i class="bi bi-arrow-right"></i>
+            </span>
+          </a>
+
+          <a
+            class="category-card"
+            href="faq.html#payments"
+            data-help-category="payments">
+
+            <span class="category-icon">
+              <i class="bi bi-credit-card" aria-hidden="true"></i>
+            </span>
+
+            <h3>Payments</h3>
+            <p>Learn about payment methods, transactions, and billing.</p>
+
+            <span class="category-arrow" aria-hidden="true">
+              <i class="bi bi-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Quick Answers === -->
+    <section
+      class="quick-answers container"
+      aria-labelledby="quickAnswersTitle">
+
+      <div class="quick-answers-art" aria-hidden="true"></div>
+
+      <div class="quick-answers-intro">
+        <span class="eyebrow">QUICK ANSWERS</span>
+
+        <h2 id="quickAnswersTitle">
+          Frequently<br>
+          Asked Questions
+        </h2>
+
+        <p>
+          Find answers to the most common questions about our events,
+          tickets, and platform.
+        </p>
+
+        <a class="outline-button" href="faq.html">
+          View All FAQ
+          <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+
+        <span class="handwritten-note" aria-hidden="true">
+          Still need<br>
+          help?
+          <i class="bi bi-arrow-down-right"></i>
+        </span>
+      </div>
+
+      <div class="quick-faq-list" id="quickFaqList">
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion1"
+              aria-expanded="false"
+              aria-controls="quickAnswer1">
+
+              <span>How do I purchase tickets?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer1"
+            role="region"
+            aria-labelledby="quickQuestion1"
+            hidden>
+
+            <p>
+              Choose an event, select your ticket type and quantity,
+              then follow the checkout steps to complete your order.
+            </p>
+          </div>
+        </article>
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion2"
+              aria-expanded="false"
+              aria-controls="quickAnswer2">
+
+              <span>Can I get a refund?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer2"
+            role="region"
+            aria-labelledby="quickQuestion2"
+            hidden>
+
+            <p>
+              Refund eligibility depends on the event’s terms and
+              the organizer’s policy. Review your order details
+              or contact support for help.
+            </p>
+          </div>
+        </article>
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion3"
+              aria-expanded="false"
+              aria-controls="quickAnswer3">
+
+              <span>What payment methods are accepted?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer3"
+            role="region"
+            aria-labelledby="quickQuestion3"
+            hidden>
+
+            <p>
+              Available payment methods will be shown during checkout
+              before you confirm your order.
+            </p>
+          </div>
+        </article>
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion4"
+              aria-expanded="false"
+              aria-controls="quickAnswer4">
+
+              <span>Is there an age restriction for events?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer4"
+            role="region"
+            aria-labelledby="quickQuestion4"
+            hidden>
+
+            <p>
+              Age restrictions vary by event. Check the event details
+              and any entry requirements before buying tickets.
+            </p>
+          </div>
+        </article>
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion5"
+              aria-expanded="false"
+              aria-controls="quickAnswer5">
+
+              <span>How can I transfer my tickets?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer5"
+            role="region"
+            aria-labelledby="quickQuestion5"
+            hidden>
+
+            <p>
+              Ticket transfer rules depend on the event. Review the
+              ticket conditions or contact the support team for guidance.
+            </p>
+          </div>
+        </article>
+
+        <article class="quick-faq-item">
+          <h3>
+            <button
+              class="quick-faq-question"
+              type="button"
+              id="quickQuestion6"
+              aria-expanded="false"
+              aria-controls="quickAnswer6">
+
+              <span>Where can I find my order details?</span>
+              <i class="bi bi-plus-lg" aria-hidden="true"></i>
+            </button>
+          </h3>
+
+          <div
+            class="quick-faq-answer"
+            id="quickAnswer6"
+            role="region"
+            aria-labelledby="quickQuestion6"
+            hidden>
+
+            <p>
+              Sign in to your account and check your bookings,
+              or review the confirmation message sent after your purchase.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- === Contact === -->
+    <section
+      class="contact-section"
+      aria-labelledby="contactSectionTitle">
+
+      <div class="contact-decoration" aria-hidden="true"></div>
+
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <span class="eyebrow">GET IN TOUCH</span>
+
+          <h2 id="contactSectionTitle">
+            We’re Always<br>
+            Here for You
+          </h2>
+
+          <p>
+            Prefer to talk to someone? Reach out to our support team
+            and we’ll get back to you as soon as possible.
+          </p>
+
+          <div class="contact-methods">
+            <a
+              class="contact-method"
+              href="mailto:support@opentickets.com">
+
+              <span class="contact-method-icon">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+              </span>
+
+              <span>
+                <strong>support@opentickets.com</strong>
+                <small>We’ll respond within 24 hours</small>
+              </span>
+            </a>
+
+            <a
+              class="contact-method"
+              href="tel:+27215550199">
+
+              <span class="contact-method-icon">
+                <i class="bi bi-telephone" aria-hidden="true"></i>
+              </span>
+
+              <span>
+                <strong>+27 21 555 0199</strong>
+                <small>Mon – Fri, 9AM – 6PM (SAST)</small>
+              </span>
+            </a>
+
+            <div class="contact-method">
+              <span class="contact-method-icon">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              </span>
+
+              <span>
+                <strong>Cape Town, South Africa</strong>
+                <small>Our office</small>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <form
+          class="contact-form"
+          id="supportContactForm"
+          action="#"
+          method="post">
+
+          <h3>Send Us a Message</h3>
+          <p>Fill out the form below and we’ll get back to you.</p>
+
+          <div class="form-field">
+            <label for="supportFullName">Full Name</label>
+            <input
+              type="text"
+              id="supportFullName"
+              name="fullName"
+              placeholder="Your name"
+              autocomplete="name"
+              required>
+          </div>
+
+          <div class="form-field">
+            <label for="supportEmail">Email Address</label>
+            <input
+              type="email"
+              id="supportEmail"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required>
+          </div>
+
+          <div class="form-field">
+            <label for="supportMessage">Message</label>
+            <textarea
+              id="supportMessage"
+              name="message"
+              rows="4"
+              placeholder="How can we help you?"
+              required></textarea>
+          </div>
+
+          <button class="primary-button submit-button" type="submit">
+            Send Message
+            <i class="bi bi-send" aria-hidden="true"></i>
+          </button>
+
+          <p
+            class="form-status"
+            id="supportFormStatus"
+            role="status"
+            aria-live="polite"
+            hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="support-footer">
+    <div class="container">
+
+      <div class="footer-main">
+        <div class="footer-brand-column">
+          <a
+            class="support-brand footer-brand"
+            href="index.html"
+            aria-label="Open Tickets home">
+
+            <span class="brand-ticket">
+              <span>OPEN</span>
+              <span>TICKETS</span>
+            </span>
+          </a>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="event-detail.html">Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="account.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Support</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Stay Connected</h2>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="#" aria-label="X">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="currentYear">2026</span>
+          Open Tickets. All rights reserved.
+        </p>
+
+        <label class="language-select" for="languageSelect">
+          <i class="bi bi-globe2" aria-hidden="true"></i>
+
+          <select id="languageSelect" aria-label="Select language">
+            <option value="en" selected>English</option>
+            <option value="id">Bahasa Indonesia</option>
+          </select>
+        </label>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

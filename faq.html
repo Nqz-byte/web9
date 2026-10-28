@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find answers to your questions about Open Tickets, bookings, payments, refunds, and event tickets.">
+  <title>FAQ & Help Center | Open Tickets</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/faq.css">
+
+  <script src="javascript/faq.js" defer></script>
+</head>
+
+<body>
+  <!-- === Header === -->
+  <header class="faq-header">
+    <nav class="navbar navbar-expand-lg faq-navbar" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand faq-brand" href="index.html" aria-label="Open Tickets home">
+          <span class="brand-ticket">
+            <span>OPEN</span>
+            <span>TICKETS</span>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler faq-nav-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#faqNavigation"
+          aria-controls="faqNavigation"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="faqNavigation">
+          <ul class="navbar-nav mx-lg-5 me-auto mb-3 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="event-detail.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="faq.html" aria-current="page">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Support.html">Support</a>
+            </li>
+          </ul>
+
+          <form class="header-search" id="headerSearchForm" role="search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="headerSearch"
+              name="search"
+              placeholder="Search events..."
+              aria-label="Search events"
+            >
+          </form>
+
+          <a class="account-link" href="account.html" aria-label="My account">
+            <i class="bi bi-person" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- === Hero === -->
+    <section class="faq-hero">
+      <div class="faq-hero-image" aria-hidden="true"></div>
+      <div class="faq-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container faq-hero-content">
+        <div class="faq-hero-copy">
+          <span class="eyebrow">FAQ / HELP CENTER</span>
+          <h1>
+            Quick Answers
+            <span>to Your Questions</span>
+          </h1>
+          <p>
+            Find the answers you need about booking, tickets,
+            payments and more. We're here to help.
+          </p>
+        </div>
+
+        <div class="hero-note" aria-hidden="true">
+          <span>Great Events</span>
+          <span>Start with</span>
+          <span>Good Info.</span>
+          <i class="bi bi-arrow-down-left"></i>
+        </div>
+      </div>
+
+      <div class="hero-bottom-curve" aria-hidden="true"></div>
+    </section>
+
+    <!-- === FAQ Content === -->
+    <section class="faq-main-section" id="faqContent">
+      <div class="container">
+        <div class="row g-4 g-xl-5">
+          <!-- Help panel -->
+          <aside class="col-lg-4 faq-sidebar">
+            <div class="help-card">
+              <div class="help-image">
+                <div class="help-image-overlay"></div>
+                <span class="help-play-icon" aria-hidden="true">
+                  <i class="bi bi-play-fill"></i>
+                </span>
+              </div>
+
+              <div class="help-intro">
+                <span class="eyebrow">HAVE A QUESTION?</span>
+                <h2>We're Here<br>To Help</h2>
+                <p>
+                  Our FAQ section covers the most common questions
+                  about Open Tickets. If you can't find what you're
+                  looking for, our support team is ready to assist you.
+                </p>
+              </div>
+
+              <div class="help-features">
+                <div class="help-feature">
+                  <span class="feature-icon">
+                    <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3>Fast Response</h3>
+                    <p>Get answers quickly.</p>
+                  </div>
+                </div>
+
+                <div class="help-feature">
+                  <span class="feature-icon">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3>Trusted &amp; Secure</h3>
+                    <p>Your information is safe with us.</p>
+                  </div>
+                </div>
+
+                <div class="help-feature">
+                  <span class="feature-icon">
+                    <i class="bi bi-headset" aria-hidden="true"></i>
+                  </span>
+                  <div>
+                    <h3>Support When You Need It</h3>
+                    <p>We're here whenever you need us.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-support">
+                <p>Still need help?</p>
+                <a href="contact.html" class="text-link">
+                  Contact Support <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Questions -->
+          <div class="col-lg-8 faq-questions-column">
+            <div class="faq-toolbar">
+              <label class="faq-search-box" for="faqSearch">
+                <i class="bi bi-search" aria-hidden="true"></i>
+                <input
+                  type="search"
+                  id="faqSearch"
+                  placeholder="Search for a question..."
+                  autocomplete="off"
+                  aria-label="Search frequently asked questions"
+                  aria-controls="faqList"
+                >
+                <button
+                  type="button"
+                  class="clear-search"
+                  id="clearFaqSearch"
+                  aria-label="Clear FAQ search"
+                  hidden
+                >
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </label>
+
+              <p class="faq-result-count" id="faqResultCount" aria-live="polite">
+                Browse frequently asked questions
+              </p>
+            </div>
+
+            <div class="faq-list" id="faqList">
+              <article
+                class="faq-item is-open"
+                data-faq-item
+                data-category="booking"
+                data-keywords="buy purchase order booking checkout"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-1"
+                    type="button"
+                    aria-expanded="true"
+                    aria-controls="faq-answer-1"
+                  >
+                    <span>How do I buy tickets on Open Tickets?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-1"
+                  role="region"
+                  aria-labelledby="faq-question-1"
+                >
+                  <p>
+                    Browse available events, select your preferred event
+                    and ticket type, then follow the checkout instructions.
+                    Review your order before completing your payment.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="refunds"
+                data-keywords="refund cancel cancellation money return"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-2"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2"
+                  >
+                    <span>Can I get a refund for my ticket?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-2"
+                  role="region"
+                  aria-labelledby="faq-question-2"
+                  hidden
+                >
+                  <p>
+                    Refund eligibility depends on the event's terms and
+                    applicable policies. Check your booking details or
+                    contact our support team for assistance with your order.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="tickets"
+                data-keywords="digital physical paper e-ticket"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-3"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3"
+                  >
+                    <span>Are tickets digital or physical?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-3"
+                  role="region"
+                  aria-labelledby="faq-question-3"
+                  hidden
+                >
+                  <p>
+                    Ticket formats may vary by event. Check the event page
+                    and your booking confirmation for the ticket format
+                    and instructions provided by the organizer.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="tickets"
+                data-keywords="receive delivery email download ticket confirmation"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-4"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-4"
+                  >
+                    <span>How will I receive my tickets?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-4"
+                  role="region"
+                  aria-labelledby="faq-question-4"
+                  hidden
+                >
+                  <p>
+                    Check your booking confirmation for details about
+                    ticket delivery. Depending on the event, tickets may
+                    be provided digitally or through another method
+                    specified by the organizer.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="tickets"
+                data-keywords="transfer share another person change name"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-5"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-5"
+                  >
+                    <span>Can I transfer my ticket to someone else?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-5"
+                  role="region"
+                  aria-labelledby="faq-question-5"
+                  hidden
+                >
+                  <p>
+                    Transfer rules depend on the event and ticket conditions.
+                    Review the event's terms before sharing or transferring
+                    your ticket. Contact support if you need clarification.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="payments"
+                data-keywords="payment methods card bank transfer checkout"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-6"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-6"
+                  >
+                    <span>What payment methods do you accept?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-6"
+                  role="region"
+                  aria-labelledby="faq-question-6"
+                  hidden
+                >
+                  <p>
+                    Available payment methods are shown during checkout.
+                    Review the options displayed for your selected event
+                    before placing your order.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="booking"
+                data-keywords="limit quantity maximum number tickets purchase"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-7"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-7"
+                  >
+                    <span>Is there a limit on how many tickets I can purchase?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-7"
+                  role="region"
+                  aria-labelledby="faq-question-7"
+                  hidden
+                >
+                  <p>
+                    Ticket limits can vary by event. Check the quantity
+                    available when selecting tickets and follow any
+                    purchase limits stated on the event page.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="account"
+                data-keywords="account register sign up create profile login"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-8"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-8"
+                  >
+                    <span>Do I need to create an account?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-8"
+                  role="region"
+                  aria-labelledby="faq-question-8"
+                  hidden
+                >
+                  <p>
+                    Account requirements depend on the booking process
+                    provided by the platform. Follow the instructions
+                    shown when selecting an event and checking out.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="tickets"
+                data-keywords="missing ticket not received email spam inbox"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-9"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-9"
+                  >
+                    <span>What should I do if I don't receive my ticket?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-9"
+                  role="region"
+                  aria-labelledby="faq-question-9"
+                  hidden
+                >
+                  <p>
+                    Check your booking confirmation and email folders,
+                    including spam or junk. If your ticket is still
+                    missing, contact support with your order details.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="faq-item"
+                data-faq-item
+                data-category="support"
+                data-keywords="contact help customer service assistance support team"
+              >
+                <h3 class="faq-question-heading">
+                  <button
+                    class="faq-question"
+                    id="faq-question-10"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-answer-10"
+                  >
+                    <span>How can I contact customer support?</span>
+                    <i class="bi bi-chevron-down faq-chevron" aria-hidden="true"></i>
+                  </button>
+                </h3>
+                <div
+                  class="faq-answer"
+                  id="faq-answer-10"
+                  role="region"
+                  aria-labelledby="faq-question-10"
+                  hidden
+                >
+                  <p>
+                    Visit our contact page to find the available support
+                    options. Include relevant booking information in your
+                    message, but never share your password or full payment
+                    card details.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="faq-no-results" id="faqNoResults" hidden>
+              <span class="no-results-icon">
+                <i class="bi bi-search" aria-hidden="true"></i>
+              </span>
+              <h3>No answers found</h3>
+              <p>Try another keyword or contact our support team.</p>
+              <button type="button" class="btn btn-primary" id="resetFaqSearch">
+                Clear Search
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- === Support CTA === -->
+        <section class="faq-support-banner" aria-labelledby="supportBannerTitle">
+          <div class="support-banner-decoration" aria-hidden="true"></div>
+
+          <div class="support-banner-icon">
+            <i class="bi bi-chat-square-dots" aria-hidden="true"></i>
+          </div>
+
+          <div class="support-banner-copy">
+            <h2 id="supportBannerTitle">
+              Can't find the answer you're looking for?
+            </h2>
+            <p>Our support team is ready to help with your questions or concerns.</p>
+          </div>
+
+          <a href="contact.html" class="support-banner-button">
+            Contact Support <i class="bi bi-arrow-right"></i>
+          </a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- === Footer === -->
+  <footer class="faq-footer">
+    <div class="container">
+      <div class="row gy-4 footer-main">
+        <div class="col-6 col-lg-3 footer-brand-column">
+          <a class="faq-brand footer-brand" href="index.html" aria-label="Open Tickets home">
+            <span class="brand-ticket">
+              <span>OPEN</span>
+              <span>TICKETS</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#featured">Events</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="account.html">My Account</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Support</h2>
+          <ul class="footer-links">
+            <li><a href="faq.html">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h2 class="footer-heading">Stay Connected</h2>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Open Tickets. All rights reserved.</p>
+
+        <label class="language-select">
+          <i class="bi bi-globe2" aria-hidden="true"></i>
+          <select id="languageSelect" aria-label="Select language">
+            <option value="en" selected>English</option>
+            <option value="id">Bahasa Indonesia</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
